@@ -10,7 +10,15 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var text1: UITextField!
+    @IBOutlet weak var text2: UITextField!
+    
     @IBOutlet weak var hello: UILabel!
+    @IBAction func tap(_ sender: Any) {
+     
+        hello.text = "Answer:\(Double(text1.text!)! + Double(text2.text!)!)"
+     
+    }
     @IBAction func TapMe(_ sender: UIButton) {
         hello.text = "Hello"
     }
