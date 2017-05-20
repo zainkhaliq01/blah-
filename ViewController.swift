@@ -9,15 +9,21 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var text1: UITextField!
     @IBOutlet weak var text2: UITextField!
     
     @IBOutlet weak var hello: UILabel!
     @IBAction func tap(_ sender: Any) {
-     
-        hello.text = "Answer:\(Double(text1.text!)! + Double(text2.text!)!)"
-     
+        
+       let addition = true
+        
+        if addition {
+            
+            hello.text = "Answer:\(Double(text1.text!)! + Double(text2.text!)!)"
+        }else{
+            hello.text = "Answer:\(Double(text1.text!)! - Double(text2.text!)!)"
+        }
     }
     @IBAction func TapMe(_ sender: UIButton) {
         hello.text = "Hello"
@@ -26,15 +32,15 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-
+        
         
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    
 }
 
